@@ -1,0 +1,34 @@
+---
+
+spring:
+  profiles: LOCAL
+  hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+
+  jpa:
+    database: H20
+    properties:
+      hibernate:
+        dialect:  org.hibernate.dialect.PostgreSQLDialect
+
+  datasource:
+    platform: h2o
+    driverClassName: org.h2o.Driver
+    url: jdbc:oracle://RKVRHLD177.devlab.dev:1521/EWSRD
+    username: sa
+    password: 
+    maxActive: 20
+    initialSize: 10
+
+  ldap:
+    contextSource:
+      url: ldap://alps.finra.org:389
+      password: ENC(7GKVWO/HyJuzUWzqqdNOkIImt+JM74YdwHPZhbwNIkY=)
+      userDn: CN=svc_rcm_principal_d,OU=Service Accounts,OU=Domain Accounts,DC=corp,DC=root,DC=nasd,DC=com
+      base: DC=corp,DC=root,DC=nasd,DC=com
+
+rest:
+  error:
+    details:
+      enabled: true
+
+---

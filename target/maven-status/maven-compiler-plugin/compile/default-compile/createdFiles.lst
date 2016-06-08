@@ -1,0 +1,5 @@
+com\ivar\test\domain\Activity.class
+com\ivar\test\configuration\JpaConfiguration.class
+com\ivar\test\rest\IvarService.class
+com\ivar\test\IvarApp.class
+com\ivar\test\domain\ActivityRepository.class
